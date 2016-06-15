@@ -21,6 +21,28 @@ div.page-section {
 div.page-section.bio {
   background-color: #E6EDF0;
   color: #21404A;
+  background-image: url(images/rainy_cat.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 -100px;
+  height: 350px;
+  opacity: .8;
+}
+
+.page-section.bio p {
+  padding-bottom: 20px;
+}
+
+.page-section.bio h1 {
+  padding-top: 20px;
+}
+
+
+#highlight {
+  background-color: rgba(0,0,0,.6);
+  color: #fff;
+  top:50px;
+  position: relative;
 }
 
 h1 {
