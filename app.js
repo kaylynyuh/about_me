@@ -14,7 +14,7 @@ if (answer1 === 'yes' || answer1 === 'y') {
 }
 
 var answer2 = prompt('Do I know how to longboard?').toLowerCase();
-if (answer2 === 'yes' || answer2 === 'y')
+if (answer2 === 'yes' || answer2 === 'y') {
   console.log(userName + ' answered correctly!');
   alert('Correct! Way to be.');
 } else {
