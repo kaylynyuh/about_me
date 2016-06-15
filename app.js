@@ -1,14 +1,10 @@
 'use strict';
 
-var userName = prompt('Greetings! What is your name?');
+/*var userName = prompt('Greetings! What is your name?');
 alert('Welcome ' + userName + ', glad you\'re here!');
+*/
 
-/*if (user is corret) {
-  tell them so
-} else {
-  tell them they're wrong
-}*/
-
+/*
 var answer1 = prompt('Do I listen to Avenged Sevenfold?').toLowerCase();
   if (answer1 === 'yes' || answer1 === 'y') {
     alert('Surprsingly, correct!');
@@ -43,3 +39,4 @@ var answer5 = prompt('Do I know how to play the flute?').toLowerCase()
   } else {
     alert('Wrong again my friend.')
   }
+  */
