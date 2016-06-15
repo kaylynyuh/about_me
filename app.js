@@ -22,7 +22,7 @@ if (answer2 === 'yes' || answer2 === 'y') {
   alert('Wrong, my friend.');
 }
 
-var answer3 = prompt('Do I have a cat obsession?').toLowerCase();
+var answer3 = prompt('Do I have a candy obsession?').toLowerCase();
 if (answer3 === 'yes' || answer3 === 'y') {
   console.log(userName + ' answered correctly!');
   alert('Right you are!');
