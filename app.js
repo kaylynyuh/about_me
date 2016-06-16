@@ -63,7 +63,11 @@ var maxGuesses = 4;
 
 while (counter < maxGuesses) {
   var input = parseInt(prompt('Guess a number between 1 and 50... Don\'t be scared! You\'re probably wrong anyway.'));
-  if (input === rightNumber){
+  if (isNaN(input)) {
+    counter++;
+    alert ('Please enter a valid number. This counts as a guess.');
+  }
+  else if (input === rightNumber){
     correctAnswers++;
     alert('Correct! Totes Amaze.');
     break;
@@ -78,7 +82,7 @@ while (counter < maxGuesses) {
   }
 }
 
-var states = ['Washington', 'Oregon', 'California', 'Hawaii', 'Alaska', 'New York'];
+var states = ['washington', 'oregon', 'california', 'hawaii', 'alaska', 'new york'];
 var counter = 0;
 var rightAnswer = false;
 var maxGuesses = 6;
@@ -87,7 +91,7 @@ guess_loop:
 while (counter < maxGuesses) {
   state_loop:
   for (var i = 0; i < states.length; i++) {
-    var userInput = prompt('Can you guess one of my favorite states?');
+    var userInput = prompt('Can you guess one of my favorite states?').toLowerCase();
     if (userInput === states[i]) {
       rightAnswer = true;
       break state_loop;
