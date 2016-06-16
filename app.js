@@ -55,25 +55,10 @@ function question4() {
   }
 }
 
-<<<<<<< HEAD
-var rightNumber = 22;
-var counter = 0;
-var maxGuesses = 4;
-
-//edit spacing for else ifs, move counters to bottom
-while (counter < maxGuesses) {
-  var input = parseInt(prompt('Guess a number between 1 and 50... Don\'t be scared! You\'re probably wrong anyway.'));
-  if (isNaN(input)) {
-    counter++;
-    alert ('Please enter a valid number. This counts as a guess.');
-  }
-  else if (input === rightNumber){
-=======
 function question5() {
   var answer5 = prompt('Does Kaylyn know how to play the flute?').toLowerCase();
   if (answer5 === 'yes' || answer5 === 'y'){
     console.log(userName + ' answered correctly!');
->>>>>>> 31d1764fc93b264402e9a2b912cb9fea6d69f143
     correctAnswers++;
     alert('Oddly enough, yes! You\'re right. It\'s a gift.');
   } else {
