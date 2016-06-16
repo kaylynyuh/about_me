@@ -61,6 +61,7 @@ var rightNumber = 22;
 var counter = 0;
 var maxGuesses = 4;
 
+//edit spacing for else ifs, move counters to bottom
 while (counter < maxGuesses) {
   var input = parseInt(prompt('Guess a number between 1 and 50... Don\'t be scared! You\'re probably wrong anyway.'));
   if (isNaN(input)) {
@@ -87,24 +88,21 @@ var counter = 0;
 var rightAnswer = false;
 var maxGuesses = 6;
 
-guess_loop:
 while (counter < maxGuesses) {
-  state_loop:
+  var userInput = prompt('Can you guess one of my favorite states?').toLowerCase();
   for (var i = 0; i < states.length; i++) {
-    var userInput = prompt('Can you guess one of my favorite states?').toLowerCase();
     if (userInput === states[i]) {
       rightAnswer = true;
-      break state_loop;
-    }
-    else {
-      counter++;
-      alert ('Try again my friend');
+      break;
     }
   }
   if (rightAnswer) {
     alert('Way to be!');
     correctAnswers++;
-    break guess_loop;
+    break;
+  } else {
+    counter++;
+    alert ('Try again my friend');
   }
 }
 
