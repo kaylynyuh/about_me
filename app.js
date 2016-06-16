@@ -1,12 +1,16 @@
 'use strict';
 
-/* var userName = prompt('Greetings! What is your name?');
+var correctAnswers = 0;
+var totalQuestions = 7;
+
+var userName = prompt('Greetings! What is your name?');
 console.log(userName + ' started the guessing game!');
 alert('Welcome ' + userName + ', glad you\'re here!');
 
 var answer1 = prompt('Do I listen to Avenged Sevenfold?').toLowerCase();
 if (answer1 === 'yes' || answer1 === 'y') {
   console.log(userName + ' answered correctly!');
+  correctAnswers++;
   alert('Surprsingly, correct!');
 } else {
   console.log(userName + ' answered incorrectly!');
@@ -16,6 +20,7 @@ if (answer1 === 'yes' || answer1 === 'y') {
 var answer2 = prompt('Do I know how to longboard?').toLowerCase();
 if (answer2 === 'yes' || answer2 === 'y') {
   console.log(userName + ' answered correctly!');
+  correctAnswers++;
   alert('Correct! Way to be.');
 } else {
   console.log(userName + ' answered incorrectly!');
@@ -25,6 +30,7 @@ if (answer2 === 'yes' || answer2 === 'y') {
 var answer3 = prompt('Do I have a candy obsession?').toLowerCase();
 if (answer3 === 'yes' || answer3 === 'y') {
   console.log(userName + ' answered correctly!');
+  correctAnswers++;
   alert('Right you are!');
 } else {
   console.log(userName + ' answered incorrectly!');
@@ -34,6 +40,7 @@ if (answer3 === 'yes' || answer3 === 'y') {
 var answer4 = prompt('Is my favorite color black? If that is even considered a color...').toLowerCase();
 if (answer4 === 'yes' || answer4 === 'y') {
   console.log(userName + ' answered correctly!');
+  correctAnswers++;
   alert('Right you are! The only color that matches my soul.');
 } else {
   console.log(userName + ' answered incorrectly!');
@@ -43,41 +50,66 @@ if (answer4 === 'yes' || answer4 === 'y') {
 var answer5 = prompt('Do I know how to play the flute?').toLowerCase();
 if (answer5 === 'yes' || answer5 === 'y'){
   console.log(userName + ' answered correctly!');
+  correctAnswers++;
   alert('Oddly enough, yes! You\'re right. It\'s a gift.');
 } else {
   console.log(userName + ' answered incorrectly!');
   alert('Wrong again my friend.');
-  */
+}
 
-// var rightNumber = 22;
-// var i = 0;
-// while (i < 4) {
-//   var input = parseInt(prompt('Guess a number between 1 and 50... Don\'t be scared! You\'re probably wrong anyway.'));
-//   if (input === rightNumber){
-//     alert('Correct!');
-//     break;
-//   }
-//   else if (input < rightNumber){
-//     alert('Too Low!');
-//     i++;
-//   }
-//   else if (input > rightNumber){
-//     alert('Too High!');
-//  i++;
-//  }
-//}
-
-var correctAnswer = ['Washington', 'Oregon', 'California', 'Hawaii', 'Alaska', 'New York'];
+var rightNumber = 22;
 var counter = 0;
-while (counter < 6) {
-  for (var i = 0; i < correctAnswer.length; i++) {
-    var userInput = prompt('What are my favorite states?');
-    if (userInput === correctAnswer[i]) {
-      alert ('Way to be!');
-      counter = 7;
+var maxGuesses = 4;
+
+while (counter < maxGuesses) {
+  var input = parseInt(prompt('Guess a number between 1 and 50... Don\'t be scared! You\'re probably wrong anyway.'));
+  if (input === rightNumber){
+    correctAnswers++;
+    alert('Correct!');
+    break;
+  }
+  else if (input < rightNumber){
+    alert('Too Low!');
+    counter++;
+  }
+  else if (input > rightNumber){
+    alert('Too High!');
+    counter++;
+  }
+}
+
+var states = ['Washington', 'Oregon', 'California', 'Hawaii', 'Alaska', 'New York'];
+var counter = 0;
+var rightAnswer = false;
+var maxGuesses = 6;
+
+guess_loop:
+while (counter < maxGuesses) {
+  state_loop:
+  for (var i = 0; i < states.length; i++) {
+    var userInput = prompt('Can you guess one of my favorite states?');
+    if (userInput === states[i]) {
+      rightAnswer = true;
+      break state_loop;
     }
     else {
+      counter++;
       alert ('Try again my friend');
     }
   }
+  if (rightAnswer) {
+    alert('Way to be!');
+    correctAnswers++;
+    break guess_loop;
+  }
 }
+
+// provide different message depending on results
+if (correctAnswers >= 5) {
+  var message = 'Way to be!';
+}
+else {
+  var message = 'Better luck next time!';
+}
+
+alert ('You got ' + correctAnswers + ' out of ' + totalQuestions + ' correct, ' + userName + '. ' + message);
