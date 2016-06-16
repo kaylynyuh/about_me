@@ -7,7 +7,7 @@ var userName = prompt('Greetings! What is your name?');
 console.log(userName + ' started the guessing game!');
 alert('Welcome ' + userName + ', glad you\'re here!');
 
-var answer1 = prompt('Do I listen to Avenged Sevenfold?').toLowerCase();
+var answer1 = prompt('Does Kaylyn listen to Avenged Sevenfold?').toLowerCase();
 if (answer1 === 'yes' || answer1 === 'y') {
   console.log(userName + ' answered correctly!');
   correctAnswers++;
@@ -17,7 +17,7 @@ if (answer1 === 'yes' || answer1 === 'y') {
   alert('Wrongo! Maybe next time.');
 }
 
-var answer2 = prompt('Do I know how to longboard?').toLowerCase();
+var answer2 = prompt('Does Kaylyn know how to longboard?').toLowerCase();
 if (answer2 === 'yes' || answer2 === 'y') {
   console.log(userName + ' answered correctly!');
   correctAnswers++;
@@ -27,7 +27,7 @@ if (answer2 === 'yes' || answer2 === 'y') {
   alert('Wrong, my friend.');
 }
 
-var answer3 = prompt('Do I have a candy obsession?').toLowerCase();
+var answer3 = prompt('Does Kaylyn have a candy addiction?').toLowerCase();
 if (answer3 === 'yes' || answer3 === 'y') {
   console.log(userName + ' answered correctly!');
   correctAnswers++;
@@ -37,17 +37,17 @@ if (answer3 === 'yes' || answer3 === 'y') {
   alert('Wrongo.');
 }
 
-var answer4 = prompt('Is my favorite color black? If that is even considered a color...').toLowerCase();
+var answer4 = prompt('Is her favorite color black? If that is even considered a color...').toLowerCase();
 if (answer4 === 'yes' || answer4 === 'y') {
   console.log(userName + ' answered correctly!');
   correctAnswers++;
-  alert('Right you are! The only color that matches my soul.');
+  alert('Right you are! The only color that matches her soul.');
 } else {
   console.log(userName + ' answered incorrectly!');
-  alert('Incorrect. Haven\'t you seen my clothes?');
+  alert('Incorrect. Haven\'t you seen her clothes?');
 }
 
-var answer5 = prompt('Do I know how to play the flute?').toLowerCase();
+var answer5 = prompt('Does Kaylyn know how to play the flute?').toLowerCase();
 if (answer5 === 'yes' || answer5 === 'y'){
   console.log(userName + ' answered correctly!');
   correctAnswers++;
@@ -65,7 +65,7 @@ while (counter < maxGuesses) {
   var input = parseInt(prompt('Guess a number between 1 and 50... Don\'t be scared! You\'re probably wrong anyway.'));
   if (input === rightNumber){
     correctAnswers++;
-    alert('Correct!');
+    alert('Correct! Totes Amaze.');
     break;
   }
   else if (input < rightNumber){
