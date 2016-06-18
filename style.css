@@ -6,19 +6,19 @@ body {
   background-color:  #21404A;
 }
 
-div, h1, body, html, p {
+div, section, h1, body, html, p {
   padding: 0px;
   margin: 0px;
 }
 
-div.page-section {
+section.page {
   min-height: 300px;
   width: 100%;
   color: #E6EDF0;
   background-color: #21404A;
 }
 
-div.page-section.bio {
+section.page-bio {
   background-color: #E6EDF0;
   color: #21404A;
   background-image: url(images/rainy_cat.jpg);
@@ -29,16 +29,16 @@ div.page-section.bio {
   opacity: .8;
 }
 
-.page-section.bio p {
+.page-bio p {
   padding-bottom: 20px;
 }
 
-.page-section.bio h1 {
+.page-bio h1 {
   padding-top: 20px;
 }
 
 
-#highlight {
+.highlight {
   background-color: rgba(0,0,0,.6);
   color: #fff;
   top:50px;
